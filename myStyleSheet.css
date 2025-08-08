@@ -1,0 +1,222 @@
+:root{
+--White: hsl(0, 0%, 100%);
+
+--Stone-100: hsl(30, 54%, 90%);
+--Stone-150: hsl(30, 18%, 87%);
+--Stone-600: hsl(30, 10%, 34%);
+--Stone-900: hsl(24, 5%, 18%);
+
+--Brown-800: hsl(14, 45%, 36%);
+
+--Rose-800: hsl(332, 51%, 32%);
+--Rose-50: hsl(330, 100%, 98%);
+
+/* FONTS */
+
+--fs-body: 1rem;
+--fs-heading: 2.5rem;
+--fs-subHeading: 2rem;
+--fs-small-heading: 1.25rem;
+
+--ff-body: "Outfit", sans-serif;
+--ff-body-secondary: "Young Serif", serif;
+
+--fw-regular: 400;
+--fw-semi-bold: 600;
+--fw-bold: 700;
+}
+
+/* //////////////////////////////////
+                                    RESET
+//////////////////////////////////*/
+
+@layer reset {
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body{
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+li,
+a {
+  list-style: '';
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+}
+/* //////////////////////////////////
+                                    END OF RESET
+//////////////////////////////////*/
+
+/* //////////////////////////////////
+                                    GLOBAL
+//////////////////////////////////*/
+
+body{
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    color: var(--Stone-600);
+
+    background-color: var(--Stone-100);
+
+    display: grid;
+    place-content: center;
+}
+
+.myList{
+    list-style: square ;
+    padding: 1rem 0 0 1rem;
+}
+
+/* //////////////////////////////////
+                                    END OF GLOBAL
+//////////////////////////////////*/
+
+/* ///////////////////////////////// CONTAINER */
+
+.container{
+    max-width: 46.875rem;
+    background-color: var(--White);
+
+    border-radius: 2rem;
+    margin-top: 3.125rem;
+    padding: 2.5rem;
+
+    box-shadow: 0 0 1rem  rgba(0, 0, 0, 0.15);
+}
+
+/* ///////////////////////////////// END OF CONTAINER */
+
+/* ///////////////////////////////// HEADER */
+
+.header-img{
+    border-radius: 2rem;
+    margin-bottom: 2.8125rem;
+}
+
+.header-title{
+    font-family: var(--ff-body-secondary);
+    font-size: var(--fs-heading);
+    color: var(--Stone-900);
+}
+
+.header-info{
+    margin-block: 2.1875rem;
+}
+
+.header-subTitle{
+    font-size: var(--fs-small-heading);
+    font-weight: var(--fw-semi-bold);
+    color: var(--Rose-800);
+}
+
+.preparation-section{
+    margin: 3.75rem 0 3.75rem 1.875rem;  
+}
+
+.header-list{
+    margin-left: 1.5rem;
+}
+
+.header-list-items{
+    color: var(--Stone-600);
+}
+
+/* ///////////////////////////////// END OF HEADER */
+
+/* ///////////////////////////////// MAIN */
+
+
+.main-ingredients,
+.main-instructions,
+.main-nutrition{
+    color: var(--Stone-600);
+
+    margin-block: 3.75rem;;
+}
+
+.ingredient-title{
+    font-family: var(--ff-body-secondary);
+    font-size: var(--fs-subHeading);
+}
+
+.ingredient-list{
+    margin-left: 1rem;
+}
+
+.instruction-title{
+    font-family: var(--ff-body-secondary);
+    font-size: var(--fs-subHeading);
+}
+
+.instruction-list-item{
+    list-style: decimal;
+
+    margin-left: 1rem;
+}
+
+.nutrition-title{
+    font-family: var(--ff-body-secondary);
+    font-size: var(--fs-subHeading);
+}
+
+.nutrition-info{
+    margin-block: 1rem;
+}
+
+table{
+    width: 75%;
+    margin: 1rem 0 0 2.1875rem;
+}
+
+table td{
+    padding-bottom: 1rem;
+}
+
+/* ///////////////////////////////// END OF MAIN */
